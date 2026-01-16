@@ -41,7 +41,7 @@ public class logout extends HttpServlet {
 		
 		response.setContentType("text/html");
 		Printwriter pw=response.getWriter();
-		HttpSession session=request.getSession();
+		HttpSession session=request.getSession(false);
 		ArrayList<String>
 		loginhistory=(ArrayList<String>)session.getAttribute("loginhistory");
 		String username=(String)request.getAttribute("username");
